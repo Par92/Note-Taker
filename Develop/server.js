@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const uuid = require('./helpers/uuid');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -26,35 +26,26 @@ app.get('/', (req, res) => {
 
 //routes json
 app.get('/api/notes', (req, res) => {
-    // Send a message to the client
+
   res.sendFile(path.join(__dirname, "/db/db.json"));
   
-    // Log our request to the terminal
   console.info(`${req.method} request received to get notes`);
 });
-
-
-
-
 
 
   app.post('/api/notes', (req, res) => {
     
     console.info(`${req.method} note received`);
   
-    // Destructuring assignment for the items in req.body
     const { title, text } = req.body;
   
-    // If all the required properties are present
     if (title && text) {
-      // Variable for the object we will save
       const newNote = {
         title,
         text,
         id: uuid(),
       };
   
-      // Obtain existing reviews
       let data = fs.readFileSync('./db/db.json', 'utf-8')
       let parsedData = JSON.parse(data);
       parsedData.push(newNote)
