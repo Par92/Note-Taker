@@ -19,6 +19,7 @@
 
   ## Usage
   User will deplay the app [here](https://nameless-ridge-93720.herokuapp.com/). This will take them to the landing page of the app. When the 'Get Started' button is clicked, they will be redirected to the 'notes' page. Here a page is presented with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column. When a new note title and text is entered, a Save icon appears in the navigation at the top of the page. When clicked, this will make the new note appear in the left-hand column with the other existing notes. If the user clicks on an existing note in the list in the left-hand column, the note appears back in the right-hand column. The write icon in the navigation at the top of the page will present the user with the ability to enter a new note title and text. The delete icon next to the added note titles will allow the user to delete unwanted notes. 
+![Screenshot 2022-03-11 161806](https://user-images.githubusercontent.com/97469705/157987353-a700a904-6a0c-492e-9005-daf3ff308825.png)
 
   
 
